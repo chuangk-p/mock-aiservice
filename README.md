@@ -3,8 +3,7 @@
 ## Installation
 
 ```bash
-git clone https://github.com/chuangk-p/mock-aiservice.git
-pip install -e .
+pip install git+https://github.com/chuangk-p/mock-aiservice.git
 ```
 
 How To Use
