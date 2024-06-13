@@ -130,7 +130,7 @@ from mockaiservice.speech import tts
 tts.convert('สวัสดีครับ', 'test.wav')
 ```
 ```bash
-from mockaiservice.speech import tts
+from mockaiservice.speech import stt
 
 stt.convert('test.wav', return_json=True)
 ```
