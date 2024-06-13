@@ -6,7 +6,7 @@ def word_approx(text:str, model:str, return_json:bool):
     headers = {'Apikey':api_key}
 
     url = "https://api.aiforthai.in.th/wordapprox"
-    data = {'text':text, 'model':model}
+    data = {'word':text, 'model':model}
 
     res = requests.post(url, data=data, headers=headers)
     if return_json == False:
