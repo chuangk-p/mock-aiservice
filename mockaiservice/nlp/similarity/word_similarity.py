@@ -1,8 +1,11 @@
 import requests
+from mockaiservice.setting.setting import get_api_key
 
 def similarity(text:str, model:str, numword:int, return_json:bool):
+    api_key = get_api_key()
+    headers = {'Apikey':api_key}
+
     url = "https://api.aiforthai.in.th/thaiwordsim"
-    headers = {'Apikey':"ovBT4rSBVze2Ia7i1GDz9JkEjpyaXU2t"}
 
     if model != 'thwiki' and model != 'twitter':
         raise ValueError(

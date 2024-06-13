@@ -1,14 +1,16 @@
 import requests
+from mockaiservice.setting.setting import get_api_key
 
 def tokenize(text:str, normalize:bool, return_json:bool):
+    api_key = get_api_key()
     url ='https://api.aiforthai.in.th/lextoplus'
-    headers = {'Apikey':"ovBT4rSBVze2Ia7i1GDz9JkEjpyaXU2t"}
+    headers = {'Apikey':api_key}
     data = {'text':text}
     
     if normalize == False:
-        params['norm'] = '0'
+        data['norm'] = '0'
     else:
-        params['norm'] = '1'
+        data['norm'] = '1'
     res = requests.post(url, data=data, headers=headers)
     if return_json == False:
         return res.json()['tokens']

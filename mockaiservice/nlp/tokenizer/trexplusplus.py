@@ -1,8 +1,10 @@
 import requests
+from mockaiservice.setting.setting import get_api_key
 
 def tokenize(text:str, return_json:bool):
+    api_key = get_api_key()
     url = "https://api.aiforthai.in.th/tpos"
-    headers = {'Apikey':"ovBT4rSBVze2Ia7i1GDz9JkEjpyaXU2t"}
+    headers = {'Apikey':api_key}
     data = {'text':text}
 
     res = requests.post(url, data=data, headers=headers)

@@ -1,8 +1,10 @@
 import requests
+from mockaiservice.setting.setting import get_api_key
 
-def ssense(text:str, return_json:bool=False):
+def analyze(text:str, return_json:bool=False):
+    api_key = get_api_key()
+    headers = {'Apikey':api_key}
     url = "https://api.aiforthai.in.th/ssense"
-    headers = {"apikey":"ovBT4rSBVze2Ia7i1GDz9JkEjpyaXU2t"}
     data = {"text":text}
     
     res = requests.post(url, data=data, headers=headers)

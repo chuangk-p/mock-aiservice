@@ -1,6 +1,9 @@
 import requests
+from mockaiservice.setting.setting import get_api_key
 
-def thaimoji(text:str, return_json:bool=False):
+def analyze(text:str, return_json:bool=False):
+    api_key = get_api_key()
+    headers = {'Apikey':api_key}
     moji_list =[['🙂','😄','😁','😆','😀','😊','😃'],
     ['😢','😥','😰','😓','🙁','😟','😞','😔','😣','😫','😩'],
     ['😡','😠','😤','😖'],
@@ -26,9 +29,6 @@ def thaimoji(text:str, return_json:bool=False):
 
     url = "https://api.aiforthai.in.th/emoji"
     params = {'text':text}
-    headers = {
-        'Apikey': "ovBT4rSBVze2Ia7i1GDz9JkEjpyaXU2t"
-        }
     res = requests.get(url, params=params, headers=headers)
     if return_json == False:
         keys = res.json().keys()
