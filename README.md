@@ -124,11 +124,13 @@ translation.translate('สวัสดี', src='th', to='zh')
 translation.translate('你好', src='zh', to='th')
 ```
 ## Speech
+### text to speech
 ```bash
 from mockaiservice.speech import tts
 
 tts.convert('สวัสดีครับ', 'test.wav')
 ```
+### speech to text
 ```bash
 from mockaiservice.speech import stt
 
