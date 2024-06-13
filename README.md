@@ -138,8 +138,6 @@ stt.convert('test.wav', return_json=True)
 ## Image
 ### car logo
 ```bash
-from mockaiservice.image import thaifood, carlogo, handwritten, lpr, nsfw, detection
-
 from mockaiservice.image carlogo
 
 carlogo.analyze('image.png',  return_json=True)
@@ -175,5 +173,5 @@ from mockaiservice.image detection
 detection.analyze('image.png') # engine = face, facemask
 ```
 ```bash
-detection.analyze("../p_mask.jpg", engine='facemask')
+detection.analyze('image.png', engine='facemask')
 ```
