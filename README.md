@@ -15,7 +15,7 @@ setting.set_api_key('YOUR_API_KEY')
 ```
 # Use case
 ## NLP
-### tokenizer
+### Tokenizer
 ```bash
 from mockaiservice.nlp import tokenizer
 
@@ -27,7 +27,7 @@ tokenizer.tokenize('สวัสดี AI', return_json=True)
 ```bash
 tokenizer.tokenize('สวัสดี AI', engine='trexplusplus') # engine = lexto, trexplus, trexplusplus
 ```
-### sentiment
+### Sentiment
 ```bash
 from mockaiservice.nlp import sentiment
 
@@ -42,7 +42,7 @@ sentiment.analyze('อาหารร้านนี้อร่อยมาก'
 ```bash
 sentiment.analyze('อาหารร้านนี้อร่อยมาก', engine='cyberbully')
 ```
-### summarize
+### Summarize
 ```bash
 from mockaiservice.nlp import text_sum
 
@@ -66,7 +66,7 @@ text = """
 
 text_sum.summarize(text)
 ```
-### similarity
+### Similarity
 ```bash
 from mockaiservice.nlp import similarity
 
@@ -78,43 +78,43 @@ similarity.similarity('ต้มยำกุ้ง', engine='thaiwordsim', model
 ```bash
 similarity.similarity('ต้มยำกุง', engine='wordapprox', model='food', return_json=True) # model = personname, royin, food
 ```
-### soundex
+### Soundex
 ```bash
 from mockaiservice.nlp import soundex
 
 soundex.analyze('สมใจ') # model = personname, royin
 ```
-### g2p
+### Grapheme to Phoneme
 ```bash
 from mockaiservice.nlp import g2p
 
 g2p.analyze('พนักงานโรงแรม XYZ ให้บริการต้อนรับดีมากกก')
 ```
-### ner
+### NER
 ```bash
 from mockaiservice.nlp import ner
 
 ner.analyze('งานประชุมวิชาการ สวทช. จัดขึ้นในวันที่ 25 มี.ค. พ.ศ. 2562 ณ อุทยานวิทยาศาสตร์ประเทศไทย')
 ```
-### question answering
+### Question Answering
 ```bash
 from mockaiservice.nlp import qa
 
 qa.analyze("ยื่นประมูลรายเดียวทำไง", return_json=True)
 ```
-### tag suggestion
+### Tag Suggestion
 ```bash
 from mockaiservice.nlp import tag
 
 tag.analyze('ข้าวและแป้งมีสารอาหารหลักคือคาร์โบไฮเดรต', numtag=5)
 ```
-### text cleansing
+### Text Cleansing
 ```bash
 from mockaiservice.nlp import text_cleansing
 
 text_cleansing.clean('เเพง')
 ```
-### translation
+### Translation
 ```bash
 from mockaiservice.nlp import translation
 
@@ -124,50 +124,50 @@ translation.translate('สวัสดี', src='th', to='zh')
 translation.translate('你好', src='zh', to='th')
 ```
 ## Speech
-### text to speech
+### Text to Speech
 ```bash
 from mockaiservice.speech import tts
 
 tts.convert('สวัสดีครับ', 'test.wav')
 ```
-### speech to text
+### Speech to Text
 ```bash
 from mockaiservice.speech import stt
 
 stt.convert('test.wav', return_json=True)
 ```
 ## Image
-### car logo
+### Car Logo
 ```bash
 from mockaiservice.image carlogo
 
 carlogo.analyze('image.png',  return_json=True)
 ```
-### thaifood
+### Thai Food
 ```bash
 from mockaiservice.image thaifood
 
 thaifood.analyze('image.png')
 ```
-### lpr
+### Thai License Plate Recognition
 ```bash
 from mockaiservice.image lpr
 
 lpr.analyze('image.png', crop=0, rotate=1)
 ```
-### hand written
+### Hand Written
 ```bash
 from mockaiservice.image handwritten
 
 handwritten.analyze('image.png')
 ```
-### nsfw
+### NSFW
 ```bash
 from mockaiservice.image nsfw
 
 nsfw.analyze('image.png')
 ```
-### detection
+### Face Detection
 ```bash
 from mockaiservice.image detection
 
