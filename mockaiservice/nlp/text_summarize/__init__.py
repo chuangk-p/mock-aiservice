@@ -1,1 +1,0 @@
-from mockaiservice.nlp.textsummarize.summarize import summarize
