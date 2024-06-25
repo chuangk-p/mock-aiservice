@@ -1,7 +1,7 @@
 import requests
 from mockaiservice.setting.setting import get_api_key
 
-def analyze(file:str, return_json:bool=False):
+def analyze(file:str, return_json:bool=True):
     api_key = get_api_key()
     headers = {'Apikey':api_key}
     url ='https://api.aiforthai.in.th/carlogo'

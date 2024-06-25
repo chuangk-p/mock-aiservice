@@ -1,7 +1,7 @@
 import requests
 from mockaiservice.setting.setting import get_api_key
 
-def convert(path:str, outputlevel:str='--uttlevel', outputformat:str='--txt', return_json:bool=False):
+def convert(path:str, outputlevel:str='--uttlevel', outputformat:str='--txt', return_json:bool=True):
     api_key = get_api_key()
     url = "https://api.aiforthai.in.th/partii-webapi"
     

@@ -1,4 +1,4 @@
-def tokenize(text:str, normalize:bool=False, return_json:bool=False, engine:str='lexto'):
+def tokenize(text:str, normalize:bool=False, return_json:bool=True, engine:str='lexto'):
     if engine == 'lexto':
         from mockaiservice.nlp.tokenizer.lexto import tokenize
         return tokenize(text, normalize=normalize, return_json=return_json)

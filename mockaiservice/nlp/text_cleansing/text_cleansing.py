@@ -1,7 +1,7 @@
 import requests
 from mockaiservice.setting.setting import get_api_key
 
-def clean(text:str, return_json:bool=False):
+def clean(text:str, return_json:bool=True):
     api_key = get_api_key()
     headers = {'Apikey':api_key}
 

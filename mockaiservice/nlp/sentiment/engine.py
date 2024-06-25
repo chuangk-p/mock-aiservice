@@ -1,4 +1,4 @@
-def analyze(text:str, engine:str='ssense', return_json:bool=False):
+def analyze(text:str, engine:str='ssense', return_json:bool=True):
     if engine == 'emonews':
         from mockaiservice.nlp.sentiment.emonews import analyze
         return analyze(text, return_json=return_json)

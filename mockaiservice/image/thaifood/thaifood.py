@@ -2,7 +2,7 @@ import base64
 import requests, json
 from mockaiservice.setting.setting import get_api_key
 
-def analyze(file:str, return_json:bool=False):
+def analyze(file:str, return_json:bool=True):
     with open(file, 'rb') as image_file:
         base64_bytess = base64.b64encode(image_file.read())
 

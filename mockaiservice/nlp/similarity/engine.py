@@ -1,4 +1,4 @@
-def similarity(text:str, model:str='', numword='5', engine:str='thaiwordsim', return_json:bool=False):
+def similarity(text:str, model:str='', numword='5', engine:str='thaiwordsim', return_json:bool=True):
     if engine == 'wordapprox':
         from mockaiservice.nlp.similarity.word_approximation import word_approx
         if model == '':
