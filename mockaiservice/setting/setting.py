@@ -1,5 +1,5 @@
 API_KEY = ''
-
+PACKAGE_NAME = 'ai4thai-lib'
 def get_api_key():
     return API_KEY
 

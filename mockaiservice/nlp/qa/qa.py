@@ -1,9 +1,9 @@
 import requests
-from mockaiservice.setting.setting import get_api_key
+from mockaiservice.setting.setting import get_api_key, PACKAGE_NAME
 
 def analyze(text:str, lim:int=1, minscore:float=0.1, return_json:bool=True):
     api_key = get_api_key()
-    headers = {'Apikey':api_key}
+    headers = {'Apikey':api_key, 'X-lib':PACKAGE_NAME}
     url = "https://api.aiforthai.in.th//ptt-qsearch/predict"
     params = {'text':text, "lim":lim,"minscore":minscore}
 

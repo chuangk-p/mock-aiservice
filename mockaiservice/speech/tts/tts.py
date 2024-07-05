@@ -1,10 +1,10 @@
 import requests
 import time
-from mockaiservice.setting.setting import get_api_key
+from mockaiservice.setting.setting import get_api_key, PACKAGE_NAME
 
 def convert(text:str, path:str, speaker:int=0, phrase_break:int=0, audiovisual:int=0):
     api_key = get_api_key()
-    headers = {'Apikey':api_key}
+    headers = {'Apikey':api_key, 'X-lib':PACKAGE_NAME}
 
     url = 'https://api.aiforthai.in.th/vaja9/synth_audiovisual'
     data = {'input_text':text,'speaker': speaker, 

@@ -1,9 +1,9 @@
 import requests
-from mockaiservice.setting.setting import get_api_key
+from mockaiservice.setting.setting import get_api_key, PACKAGE_NAME
 
 def similarity(text:str, model:str, numword:int, return_json:bool):
     api_key = get_api_key()
-    headers = {'Apikey':api_key}
+    headers = {'Apikey':api_key, 'X-lib':PACKAGE_NAME}
 
     url = "https://api.aiforthai.in.th/thaiwordsim"
 

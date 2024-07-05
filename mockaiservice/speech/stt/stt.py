@@ -1,5 +1,5 @@
 import requests
-from mockaiservice.setting.setting import get_api_key
+from mockaiservice.setting.setting import get_api_key, PACKAGE_NAME
 
 def convert(path:str, outputlevel:str='--uttlevel', outputformat:str='--txt', return_json:bool=True):
     api_key = get_api_key()

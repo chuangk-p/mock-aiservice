@@ -1,5 +1,5 @@
 import requests
-from mockaiservice.setting.setting import get_api_key
+from mockaiservice.setting.setting import get_api_key, PACKAGE_NAME
 
 def analyze(file:str, return_json:bool):
     api_key = get_api_key()
@@ -8,7 +8,7 @@ def analyze(file:str, return_json:bool):
     payload={}
     files=[('file',(file,open(file,'rb'),'image/jpeg'))]
 
-    headers = {'Apikey':api_key}
+    headers = {'Apikey':api_key, 'X-lib':PACKAGE_NAME}
 
     res = requests.request("POST", url, headers=headers, data=payload, files=files)
 

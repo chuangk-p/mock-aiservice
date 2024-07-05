@@ -1,10 +1,10 @@
 import requests
-from mockaiservice.setting.setting import get_api_key
+from mockaiservice.setting.setting import get_api_key, PACKAGE_NAME
 
 def tokenize(text:str, normalize:bool, return_json:bool):
     api_key = get_api_key()
     url ='https://api.aiforthai.in.th/lextoplus'
-    headers = {'Apikey':api_key}
+    headers = {'Apikey':api_key, 'X-lib':PACKAGE_NAME}
     data = {'text':text}
     
     if normalize == False:
