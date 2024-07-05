@@ -2,7 +2,8 @@ import requests
 import time
 from mockaiservice.setting.setting import get_api_key, PACKAGE_NAME
 
-def convert(text:str, path:str, speaker:int=0, phrase_break:int=0, audiovisual:int=0):
+def tts(text:str, path:str, speaker:int=0, phrase_break:int=0, audiovisual:int=0):
+    time.sleep(1)
     api_key = get_api_key()
     headers = {'Apikey':api_key, 'X-lib':PACKAGE_NAME}
 
