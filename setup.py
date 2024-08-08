@@ -10,7 +10,7 @@ with open('requirements.txt', 'rt') as f:
             requirements.append(f'{pkg_name} @ {req}')
         else:
             requirements.append(req)
-#print(requirements)
+
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
